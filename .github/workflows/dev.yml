@@ -8,7 +8,7 @@ on:
       - ".github/workflows/dev.yml"
     branches:
       - main
-    pull_request:
+  pull_request:
       branches:
         - main
 
