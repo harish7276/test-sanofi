@@ -8,9 +8,9 @@ on:
       - ".github/workflows/dev.yml"
     branches:
       - main
-    pull_request:
-      branches:
-        - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
   terraform-plan:
@@ -52,7 +52,6 @@ jobs:
     name: Terraform Apply (prod)
     runs-on: ubuntu-latest
     needs: terraform-plan
-    working-directory: environments/prod
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     
     steps:
