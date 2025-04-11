@@ -52,7 +52,6 @@ jobs:
     name: Terraform Apply (dev)
     runs-on: ubuntu-latest
     needs: terraform-plan
-    working-directory: environments/dev
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     
     steps:
